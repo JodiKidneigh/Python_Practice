@@ -1,19 +1,18 @@
 def raindrops(number):
-    factors = False
+    rain_sound = ""
     if number % 3 == 0:
-        print("Pling")
-        factors = True
+        rain_sound += "Pling"
 
     if number % 5 == 0:
-        print("Plang")
-        factors = True
-        
+        rain_sound += "Plang"
+       
     if number % 7 == 0:
-        print("Plong")
-        factors = True
+        rain_sound += "Plong"
+            
+    if rain_sound == "":
+        rain_sound += str(number)
     
-    if factors == False:
-        print(str(number))
+    print(rain_sound)
 
 
 raindrops(34)
