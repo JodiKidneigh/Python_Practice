@@ -1,22 +1,18 @@
 def raindrops(number):
     rain_sound = ""
-    if number % 3 == 0:
-        rain_sound += "Pling"
-
-    if number % 5 == 0:
-        rain_sound += "Plang"
-       
-    if number % 7 == 0:
-        rain_sound += "Plong"
+    drops = ["Pling", "Plang", "Plong"]
+    factors = [3, 5, 7]
+    for (index, factor) in enumerate(factors):
+        if number % factor == 0:
+            rain_sound += drops[index]
             
-    if rain_sound == "":
-        rain_sound += str(number)
+    return rain_sound if rain_sound else str(number)
     
-    print(rain_sound)
+   
 
 
-raindrops(34)
-raindrops(21)
-raindrops(24)
-raindrops(63)
-raindrops(35)
+print(raindrops(34))
+print(raindrops(21))
+print(raindrops(24))
+print(raindrops(63))
+print(raindrops(135))
