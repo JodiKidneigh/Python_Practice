@@ -1,12 +1,8 @@
 def raindrops(number):
-    rain_sound = ""
-    drops = [(3, "Pling"), (5,"Plang"), (7,"Plong")]
-    
-    for factor, drop in drops:
-        if number % factor == 0:
-            rain_sound += drop
+    drops = [(3, "Pling"), (5,"Plang"), (7,"Plong")]  
+    sounds = [drop for factor, drop in drops if number % factor == 0]
             
-    return rain_sound or str(number)
+    return ''.join(sounds) or str(number)
     
    
 
