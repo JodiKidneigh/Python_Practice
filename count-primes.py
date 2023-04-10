@@ -15,12 +15,16 @@ def count_primes(N):
         is_prime = True
         # if number in prime_numbers:
         #     found_primes.append(number)
+        #[f(x) if condition else g(x) for x in sequence]
+
         for prime in prime_numbers:
             if number % prime == 0:
                 is_prime = False
-                break    
+                break
+
         if is_prime:
             prime_numbers.append(number)
+            
     print(prime_numbers)
 
     count_of_prime_numbers = len(prime_numbers)
